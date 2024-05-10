@@ -1,0 +1,15 @@
+.body{
+    text-align: center;
+
+}
+.example-card {
+    max-width: 400px;
+    text-align: center;
+
+  }
+  
+  .example-header-image {
+    
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Gengar_face.png');
+    background-size: cover;
+  }
