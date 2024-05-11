@@ -1,21 +1,31 @@
 <div class="body">
-    <h1>Iniciar Sesion</h1>
-</div>
   <mat-card class="example-card">
+    <h1>Iniciar Sesión</h1>
+
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image" style="text-align: center;"></div>
-    
+      <div mat-card-avatar class="example-header-image"></div>
     </mat-card-header>
     <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Usuario</mat-label>
+          <input type="text" matInput [formControl]="userFormControl" placeholder="Ingrese su usuario">
+          <mat-error *ngIf="userFormControl?.invalid && (userFormControl?.dirty || userFormControl?.touched)">
+            <span *ngIf="userFormControl?.hasError('required')">Usuario es requerido</span>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Contraseña</mat-label>
+          <input type="password" matInput [formControl]="passwordFormControl" placeholder="Ingrese su contraseña">
+          <mat-error *ngIf="passwordFormControl?.invalid && (passwordFormControl?.dirty || passwordFormControl?.touched)">
+            <span *ngIf="passwordFormControl?.hasError('required')">Contraseña es requerida</span>
+          </mat-error>
+        </mat-form-field>
+      </form>
+      <button mat-raised-button color="primary" (click)="verificarInicio()">Iniciar Sesión</button>
+
     </mat-card-content>
-    <mat-card-actions>
-        <div class="example-button-row">
-            <button mat-flat-button  >Primary</button>
-          </div>
-    </mat-card-actions>
+    
   </mat-card>
+</div>

@@ -1,15 +1,32 @@
-.body{
-    text-align: center;
-
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta el alto según tus necesidades */
 }
-.example-card {
-    max-width: 400px;
-    text-align: center;
 
-  }
-  
-  .example-header-image {
-    
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Gengar_face.png');
-    background-size: cover;
-  }
+.example-card {
+  max-width: 400px;
+  text-align: center;
+  border: 2px solid black;
+  margin-top: 50px; /* Espacio entre la parte superior de la página y la card */
+  margin-bottom: 50px; /* Espacio entre la parte inferior de la página y la card */
+  margin-left: auto; /* Centra la card horizontalmente */
+  margin-right: auto; /* Centra la card horizontalmente */
+  background-color: darkgrey;
+}
+
+.example-header-image {
+  width: 100px; /* Ajusta el tamaño según tus necesidades */
+  height: 100px; /* Ajusta el tamaño según tus necesidades */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  border-radius: 50%; /* Da forma de círculo a la imagen */
+  background-color: #f0f0f0; /* Color de fondo de la imagen */
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Gengar_face.png');
+  background-size: cover;
+}
+
+
+.mat-form-field {
+  background-color: yellow; /* Fondo amarillo */
+}
