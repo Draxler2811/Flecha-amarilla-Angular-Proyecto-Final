@@ -1,0 +1,67 @@
+/* Estilos para los botones */
+button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Eliminar borde del botón */
+    padding: 10px 20px; /* Ajustar el padding del botón */
+    border-radius: 5px; /* Redondear las esquinas del botón */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+  }
+  
+  /* Estilos cuando se pasa el cursor sobre el botón */
+  button:hover {
+    background-color: #0056b3; /* Cambiar color de fondo al pasar sobre el botón */
+  }
+  .custom-table {
+    width: 50%;
+    margin: auto;
+    border-collapse: collapse;
+  }
+  
+  .custom-table th, .custom-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .custom-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .custom-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .custom-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Establecer la altura mínima del cuerpo como el 100% del viewport */
+  }
+  
+  .content {
+    flex: 1; /* Hace que el contenido ocupe todo el espacio disponible */
+  }
+  
+  .footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: white; /* Color del texto del footer */
+    padding: 20px; /* Ajustar el padding del footer */
+    text-align: center; /* Centrar el texto del footer */
+  }
+  .table-container {
+    flex: 1; /* Hace que la tabla ocupe todo el espacio disponible */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+  }
+  
+  .formulario-container {
+    padding: 20px; /* Agrega un padding para separar el formulario del footer */
+  }
+  .header-button-container {
+    text-align: right; /* Alinea el contenido a la derecha */
+  }

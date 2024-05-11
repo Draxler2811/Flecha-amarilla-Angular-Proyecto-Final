@@ -1,4 +1,32 @@
 <app-header></app-header>
-<input id="pokemon" type="text" [(ngModel)]="pokemon.name">
-{{pokemon.name}}
+<div class="header-button-container">
+  <button mat-raised-button color="primary" (click)="toggleFormulario()">Agregar</button>
+</div>
+<div class="table-container">
+<table class="custom-table">
+  <tr>
+    <th>Name</th>
+    <th>URL</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let variable of valores">
+    <td>{{ variable.name }}</td>
+    <td>{{ variable.url }}</td>
+    <td><button (click)="deleteRow(variable)">Delete</button></td>
+  </tr>
+</table>
+</div>
+
+
+ <!-- Aquí se muestra el formulario si mostrarFormulario es true -->
+<div class="formulario-container" *ngIf="mostrarFormulario" style="text-align: center;">
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+    <label for="name">Name</label>
+    <input id="name" type="text" formControlName="name">
+    <label for="url">URL</label>
+    <input id="url" type="text" formControlName="url">
+    <button mat-raised-button color="primary" type="submit">Purchase</button>
+  </form>
+</div>
+
 <app-footer></app-footer>
