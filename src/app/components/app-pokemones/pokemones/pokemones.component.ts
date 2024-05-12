@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { HeaderComponent } from "../../app-header/header/header.component";
 import { FooterComponent } from "../../app-footer/footer/footer.component";
 import { ObtenerDatosService } from '../../../service/obtener-datos.service';
-import { NgModule } from '@angular/core';
 import { Pokemon } from '../../../entities/pokemon';
 import { FormBuilder, FormControl, FormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -29,8 +28,8 @@ export class PokemonesComponent implements OnInit {
   ) {
 
   this.checkoutForm = this.formBuilder.group({
-    name:new FormControl(null,[Validators.minLength(1)]),
-    url: new FormControl(null,[Validators.maxLength(2)]),
+    name:new FormControl(null,[Validators.minLength(3)]),
+    url: new FormControl(null,[Validators.maxLength(15)]),
   });
   }
   ngOnInit(): void {
@@ -45,8 +44,16 @@ export class PokemonesComponent implements OnInit {
       }
     )
   }
+  
   onSubmit(valorFormulario:any){
-    if((this.checkoutForm.invalid) || (this.checkoutForm.get('name').value == 'angular')){
+    const name = this.checkoutForm.get('name').value;
+    const url = this.checkoutForm.get('url').value;
+  
+    if (!name || !url) {
+      alert('Por favor completa todos los campos');
+      return;
+    }
+    if((this.checkoutForm.invalid)){
       alert('Formulario incorrecto')
     }else {
   this.valores.push(valorFormulario);
@@ -55,7 +62,7 @@ export class PokemonesComponent implements OnInit {
     }
   }
   toggleFormulario() {
-    this.mostrarFormulario = !this.mostrarFormulario; // Cambia el estado de visibilidad del formulario
+    this.mostrarFormulario = !this.mostrarFormulario; 
   }
   deleteRow(row: any) {
     const index = this.valores.indexOf(row);

@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  @Input() mostrarBotonCerrarSesion: boolean = true; // Por defecto, muestra el botón
+  @Input() mostrarBotonCerrarSesion: boolean = true;
 
   constructor(private   router: Router) {}
 

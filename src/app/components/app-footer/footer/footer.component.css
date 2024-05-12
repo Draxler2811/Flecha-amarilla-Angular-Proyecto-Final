@@ -3,9 +3,9 @@
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed; /* Fija el footer */
-    bottom: 0; /* Lo coloca en la parte inferior de la ventana */
-    width: 100%; /* Ocupa todo el ancho */
+    position: fixed;
+    bottom: 0;
+    width: 100%; 
   }
 
   

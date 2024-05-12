@@ -43,3 +43,23 @@
 .btn-verde:hover {
   background-color: #45a049;
 }
+.right-content {
+  position: absolute;
+  top: 0;
+  transform: translateY(+60%);
+  right: 100px;
+}
+.right-content img {
+  width: 250px; 
+  height: 250px;
+}
+.left-content {
+  position: absolute;
+  top: 0;
+  transform: translateY(+60%);
+  left: 100px;
+}
+.left-content img {
+  width: 250px; 
+  height: 250px; 
+}
