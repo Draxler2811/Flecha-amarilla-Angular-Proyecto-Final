@@ -11,6 +11,7 @@ import { FooterComponent } from "../../app-footer/footer/footer.component";
     imports: [HeaderComponent, BodyComponent, FooterComponent]
 })
 export class InicioComponent {
+  mostrarBotonCerrarSesion: boolean = false;
 
   constructor(private   router: Router) {}
 

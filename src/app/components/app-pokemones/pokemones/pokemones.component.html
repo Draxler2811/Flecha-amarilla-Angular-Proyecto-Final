@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="header-button-container">
-  <button mat-raised-button color="primary" (click)="toggleFormulario()">Agregar</button>
+  <button class="button-agregar" mat-raised-button color="primary" (click)="toggleFormulario()">Agregar</button>
 </div>
 <div class="table-container">
 <table class="custom-table">
@@ -12,7 +12,10 @@
   <tr *ngFor="let variable of valores">
     <td>{{ variable.name }}</td>
     <td>{{ variable.url }}</td>
-    <td><button (click)="deleteRow(variable)">Delete</button></td>
+    <td>
+      <button class="btn waves-effect waves-light red" (click)="deleteRow(variable)">
+        <i class="material-icons">delete</i>
+      </button>
   </tr>
 </table>
 </div>
@@ -25,8 +28,11 @@
     <input id="name" type="text" formControlName="name">
     <label for="url">URL</label>
     <input id="url" type="text" formControlName="url">
+    <tr></tr>
     <button mat-raised-button color="primary" type="submit">Purchase</button>
+
   </form>
 </div>
-
 <app-footer></app-footer>
+
+

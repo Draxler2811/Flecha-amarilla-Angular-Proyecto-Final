@@ -1,67 +1,122 @@
 /* Estilos para los botones */
 button {
-    background-color: #007bff; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    border: none; /* Eliminar borde del botón */
-    padding: 10px 20px; /* Ajustar el padding del botón */
-    border-radius: 5px; /* Redondear las esquinas del botón */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
-  }
-  
-  /* Estilos cuando se pasa el cursor sobre el botón */
-  button:hover {
-    background-color: #0056b3; /* Cambiar color de fondo al pasar sobre el botón */
-  }
-  .custom-table {
-    width: 50%;
-    margin: auto;
-    border-collapse: collapse;
-  }
-  
-  .custom-table th, .custom-table td {
-    border: 1px solid #dddddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .custom-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  .custom-table tr:hover {
-    background-color: #ddd;
-  }
-  
-  .custom-table th {
-    background-color: #4CAF50;
-    color: white;
-  }
-  body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Establecer la altura mínima del cuerpo como el 100% del viewport */
-  }
-  
-  .content {
-    flex: 1; /* Hace que el contenido ocupe todo el espacio disponible */
-  }
-  
-  .footer {
-    background-color: #333; /* Color de fondo del footer */
-    color: white; /* Color del texto del footer */
-    padding: 20px; /* Ajustar el padding del footer */
-    text-align: center; /* Centrar el texto del footer */
-  }
-  .table-container {
-    flex: 1; /* Hace que la tabla ocupe todo el espacio disponible */
-    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
-  }
-  
-  .formulario-container {
-    padding: 20px; /* Agrega un padding para separar el formulario del footer */
-  }
-  .header-button-container {
-    text-align: right; /* Alinea el contenido a la derecha */
-  }
+  background-color: #ffea00; /* Color de fondo del botón */
+  color: #000000; /* Color del texto del botón */
+  border: none; /* Eliminar borde del botón */
+  padding: 10px 20px; /* Ajustar el padding del botón */
+  border-radius: 5px; /* Redondear las esquinas del botón */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+
+.custom-table {
+  width: 50%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.custom-table th, .custom-table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.custom-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.custom-table tr:hover {
+  background-color: #ddd;
+}
+
+.custom-table th {
+  background-color: #121212;
+  color: white;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Establecer la altura mínima del cuerpo como el 100% del viewport */
+}
+
+.content {
+  flex: 1; /* Hace que el contenido ocupe todo el espacio disponible */
+}
+
+.footer {
+  background-color: #333; /* Color de fondo del footer */
+  color: white; /* Color del texto del footer */
+  padding: 20px; /* Ajustar el padding del footer */
+  text-align: center; /* Centrar el texto del footer */
+}
+
+.table-container {
+  height: calc(100vh - 200px);
+  flex: 1; /* Hace que la tabla ocupe todo el espacio disponible */
+  overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+  margin-bottom: 20px; /* Establece un margen inferior por defecto */
+}
+.formulario-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Ajusta el padding para darle un poco de espacio alrededor del contenido */
+  margin: 0 auto;
+  min-height: calc(50vh - 50px); /* Ajusta la altura mínima del contenedor del formulario */
+  background-color: #f2f2f2; /* Color de fondo gris */
+  border-radius: 5px;
+  width: 70%; /* Ajusta el ancho del contenedor del formulario */
+  max-width: 500px; /* Limita el ancho máximo del contenedor del formulario */
+  margin-bottom: 20px;
+}
+
+/* Estilos para la lista dentro del formulario */
+.formulario-container ul {
+  list-style-type: none; /* Eliminar viñetas de la lista */
+  padding: 0; /* Eliminar el relleno de la lista */
+  margin: 0; /* Eliminar el margen de la lista */
+}
+
+/* Estilos para cada elemento de la lista */
+.formulario-container li {
+  margin-bottom: 25px; /* Agregar espacio entre cada elemento */
+}
+
+/* Estilos para las etiquetas de los campos */
+.formulario-container label {
+  display: block; /* Mostrar las etiquetas en una línea nueva */
+  font-weight: bold; /* Hacer que las etiquetas sean negritas */
+  margin-bottom: 5px; /* Agregar espacio entre la etiqueta y el campo */
+}
+
+.formulario-container input {
+  width: 50%; /* Hacer que los campos ocupen todo el ancho disponible */
+  padding: 10px; /* Ajustar el relleno de los campos */
+  border: 1px solid #ccc; /* Agregar borde a los campos */
+  border-radius: 5px; /* Redondear las esquinas de los campos */
+  margin-bottom: 5px; /* Agregar espacio abajo del campo */
+}
+
+/* Estilos para el botón */
+.formulario-container button {
+  background-color: #daf110; /* Color de fondo del botón */
+  color: #000000; /* Color del texto del botón */
+  border: 1px solid #ccc;/* Eliminar borde del botón */
+  padding: 10px 20px; /* Ajustar el padding del botón */
+  border-radius: 5px; /* Redondear las esquinas del botón */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+/* Estilos cuando se pasa el cursor sobre el botón */
+.formulario-container button:hover {
+  background-color: #e7e409; /* Cambiar color de fondo al pasar sobre el botón */
+}
+.header-button-container {
+  display: flex; /* Utiliza flexbox para alinear elementos */
+  justify-content: flex-end; /* Alinea el contenido al extremo derecho */
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}

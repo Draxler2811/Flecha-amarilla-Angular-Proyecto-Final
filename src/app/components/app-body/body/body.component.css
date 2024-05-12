@@ -2,31 +2,44 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ajusta el alto según tus necesidades */
+  height: 100vh;
 }
 
 .example-card {
   max-width: 400px;
   text-align: center;
   border: 2px solid black;
-  margin-top: 50px; /* Espacio entre la parte superior de la página y la card */
-  margin-bottom: 50px; /* Espacio entre la parte inferior de la página y la card */
-  margin-left: auto; /* Centra la card horizontalmente */
-  margin-right: auto; /* Centra la card horizontalmente */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: darkgrey;
 }
 
 .example-header-image {
-  width: 100px; /* Ajusta el tamaño según tus necesidades */
-  height: 100px; /* Ajusta el tamaño según tus necesidades */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
-  border-radius: 50%; /* Da forma de círculo a la imagen */
-  background-color: #f0f0f0; /* Color de fondo de la imagen */
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #f0f0f0;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Gengar_face.png');
   background-size: cover;
 }
+.btn-amarillo {
+  background-color: #d0e60e;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
 
-
-.mat-form-field {
-  background-color: yellow; /* Fondo amarillo */
+.btn-verde:hover {
+  background-color: #45a049;
 }

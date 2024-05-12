@@ -1,4 +1,8 @@
-
-<div class="header" style="text-align: center;">
-    <h1>Pokemon </h1>
+<div class="header">
+  <div class="nav-wrapper">
+    <h1 class="title">Pokemon</h1>
+    <div class="button-wrapper">
+      <button *ngIf="mostrarBotonCerrarSesion" class="material-icons" (click)="CerrarSesion()">exit_to_app</button>
+    </div>
+  </div>
 </div>
