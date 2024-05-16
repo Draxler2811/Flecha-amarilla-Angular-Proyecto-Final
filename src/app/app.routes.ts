@@ -1,11 +1,17 @@
-import { Routes } from '@angular/router';
-import { BodyComponent } from './components/app-body/body/body.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { InicioComponent } from './components/app-inicio/inicio/inicio.component';
 import { PokemonesComponent } from './components/app-pokemones/pokemones/pokemones.component';
+import { GuardiaSesionGuard } from './guard/guardia-sesion.guard';
 
 export const routes: Routes = [
-    {path: '', component: InicioComponent},
-    {path: 'inicio', component: InicioComponent},
-    {path: 'pokemones', component: PokemonesComponent},
-      
+    { path: '', redirectTo: 'inicio', pathMatch: 'full' },
+    { path: 'inicio', component: InicioComponent },
+    { path: 'pokemones', component: PokemonesComponent, canActivate: [GuardiaSesionGuard] }
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
